@@ -151,6 +151,14 @@ window.CERTIFICATES = [
 		file: "certificate/un-human-rights-responsibilities-2025.pdf"
 	},
 	{
+		title: "Computer Operator — Experience Letter",
+		issuer: "Ministry of Energy, Irrigation and Water Supply, Madhesh Province",
+		date: "21 Feb 2025",
+		category: "Experience",
+		note: "Computer Operator (Assistant 5th level): IT systems and networks, IT support, official email and website, digital records management.",
+		file: "certificate/experience-mowsed-madhesh-2025.pdf"
+	},
+	{
 		title: "Samman-Patra (Certificate of Honour)",
 		issuer: "Shree Ekrahi Samaj Sewa Yuva Club, Bideha Municipality, Dhanusha",
 		date: "Magh 2081 BS (Jan 2025)",
@@ -180,6 +188,22 @@ window.CERTIFICATES = [
 		date: "4 Apr 2021",
 		category: "Training",
 		file: "certificate/digital-marketing-iide-2021.pdf"
+	},
+	{
+		title: "Senior Full Stack Developer & Project Manager — Experience Letter",
+		issuer: "Orangic Smart Technology Pvt. Ltd., Janakpurdham",
+		date: "14 Jun 2021",
+		category: "Experience",
+		note: "17 Jul 2019 – 13 Jun 2021: led development projects and mentored junior developers.",
+		file: "certificate/experience-orangic-2021.pdf"
+	},
+	{
+		title: "PHP Developer & Project Manager — Experience Letter",
+		issuer: "Grab Infotech Pvt. Ltd., Kathmandu",
+		date: "16 Jul 2019",
+		category: "Experience",
+		note: "Nov 2017 – Jul 2019: full-stack development and project management of A1pathshala.",
+		file: "certificate/experience-grab-infotech-2019.pdf"
 	},
 	{
 		title: "Driving Training",
