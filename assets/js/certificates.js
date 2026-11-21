@@ -13,6 +13,13 @@
 		Education: 'fa-graduation-cap'
 	};
 
+	// Icons come from the same sprite (and version) the page already uses
+	var firstUse = document.querySelector('use');
+	var sprite = firstUse ? firstUse.getAttribute('href').split('#')[0] : 'assets/icons.svg';
+	function svgIcon(name) {
+		return '<svg class="icon" aria-hidden="true"><use href="' + sprite + '#' + name.replace(/^fa-/, '') + '"></use></svg>';
+	}
+
 	function el(tag, className, text) {
 		var node = document.createElement(tag);
 		if (className) node.className = className;
@@ -25,8 +32,9 @@
 		article.dataset.category = item.category || 'Other';
 
 		var top = el('div', 'cert-top');
-		var icon = el('i', 'fa-solid ' + (icons[item.category] || 'fa-award') + ' card-icon');
+		var icon = el('span', 'card-icon');
 		icon.setAttribute('aria-hidden', 'true');
+		icon.innerHTML = svgIcon(icons[item.category] || 'fa-award');
 		top.appendChild(icon);
 		if (item.category) top.appendChild(el('span', 'badge', item.category));
 		article.appendChild(top);
@@ -42,13 +50,13 @@
 			view.href = item.file;
 			view.target = '_blank';
 			view.rel = 'noopener';
-			view.innerHTML = '<i class="fa-solid fa-file-pdf" aria-hidden="true"></i> View';
+			view.innerHTML = svgIcon('file-pdf') + ' View';
 			view.setAttribute('aria-label', 'View ' + item.title + ' certificate (PDF)');
 
 			var download = el('a', 'btn btn-ghost btn-sm');
 			download.href = item.file;
 			download.setAttribute('download', '');
-			download.innerHTML = '<i class="fa-solid fa-download" aria-hidden="true"></i> Download';
+			download.innerHTML = svgIcon('download') + ' Download';
 			download.setAttribute('aria-label', 'Download ' + item.title + ' certificate (PDF)');
 
 			actions.appendChild(view);
@@ -61,7 +69,7 @@
 			verify.href = item.verify;
 			verify.target = '_blank';
 			verify.rel = 'noopener';
-			verify.innerHTML = '<i class="fa-solid fa-circle-check" aria-hidden="true"></i> Verify';
+			verify.innerHTML = svgIcon('circle-check') + ' Verify';
 			verify.setAttribute('aria-label', 'Verify ' + item.title + ' with the issuer');
 			actions.appendChild(verify);
 		}

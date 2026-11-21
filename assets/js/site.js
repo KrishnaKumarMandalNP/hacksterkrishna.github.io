@@ -27,7 +27,8 @@
 		nav.classList.toggle('open', open);
 		toggle.setAttribute('aria-expanded', open);
 		toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-		toggle.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+		var use = toggle.querySelector('use');
+		use.setAttribute('href', use.getAttribute('href').split('#')[0] + (open ? '#xmark' : '#bars'));
 		if (open) header.classList.add('scrolled'); else onScroll();
 	}
 	toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
