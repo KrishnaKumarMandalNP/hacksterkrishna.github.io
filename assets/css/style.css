@@ -456,6 +456,58 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; }
 .socials a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
 .copyright { margin: 0; color: var(--muted); font-size: .88rem; text-align: center; }
 
+/* ---------- First-visit brand intro (~1.7s) ---------- */
+
+.intro-screen { display: none; }
+.intro-lock body { overflow: hidden; }
+.intro .intro-screen {
+	display: flex; position: fixed; inset: 0; z-index: 1000; cursor: pointer;
+	flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+	background:
+		radial-gradient(600px 400px at 30% 35%, rgba(56, 189, 248, .22), transparent 70%),
+		radial-gradient(600px 400px at 70% 65%, rgba(167, 139, 250, .22), transparent 70%),
+		#0b1020;
+	animation: intro-exit .55s cubic-bezier(.7, 0, .3, 1) 1.15s forwards;
+}
+.intro-mark { position: relative; width: 120px; height: 120px; display: grid; place-items: center; }
+.intro-ring { position: absolute; inset: 0; transform: rotate(-90deg); }
+.intro-ring circle {
+	fill: none; stroke: url(#introGrad); stroke-width: 4; stroke-linecap: round;
+	stroke-dasharray: 340; stroke-dashoffset: 340;
+	animation: intro-draw .7s cubic-bezier(.65, 0, .35, 1) forwards;
+	filter: drop-shadow(0 0 8px rgba(56, 189, 248, .55));
+}
+.intro-mono {
+	font: 700 2.1rem/1 var(--font-display); letter-spacing: .02em;
+	background: linear-gradient(135deg, #38bdf8, #a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent;
+	opacity: 0; transform: scale(.6);
+	animation: intro-pop .45s cubic-bezier(.34, 1.56, .64, 1) .25s forwards;
+}
+.intro-name { margin: 0; color: #fff; font: 600 clamp(1.3rem, 4vw, 1.9rem)/1.2 var(--font-display); letter-spacing: .01em; white-space: nowrap; }
+.intro-name span { display: inline-block; opacity: 0; transform: translateY(14px); animation: intro-rise .4s ease-out forwards; animation-delay: calc(.35s + var(--i) * .025s); }
+.intro-tag {
+	margin: 0; font: 600 .8rem/1 var(--font); letter-spacing: .22em; text-transform: uppercase; color: #7dd3fc;
+	opacity: 0; animation: intro-fade .4s ease-out .75s forwards;
+}
+
+@keyframes intro-draw { to { stroke-dashoffset: 0; } }
+@keyframes intro-pop { to { opacity: 1; transform: none; } }
+@keyframes intro-rise { to { opacity: 1; transform: none; } }
+@keyframes intro-fade { to { opacity: 1; } }
+@keyframes intro-exit { to { clip-path: inset(0 0 100% 0); } }
+
+/* hero content rises in as the intro wipes away */
+.intro .hero-text > *, .intro .hero-photo { animation: hero-in .6s cubic-bezier(.2, .7, .2, 1) both; }
+.intro .hero-photo { animation-name: hero-photo-in; animation-delay: 1.35s; }
+.intro .hero-text > :nth-child(1) { animation-delay: 1.3s; }
+.intro .hero-text > :nth-child(2) { animation-delay: 1.36s; }
+.intro .hero-text > :nth-child(3) { animation-delay: 1.42s; }
+.intro .hero-text > :nth-child(4) { animation-delay: 1.48s; }
+.intro .hero-text > :nth-child(5) { animation-delay: 1.54s; }
+.intro .hero-text > :nth-child(6) { animation-delay: 1.6s; }
+@keyframes hero-in { from { opacity: 0; transform: translateY(24px); } }
+@keyframes hero-photo-in { from { opacity: 0; transform: scale(.85); } }
+
 /* Scroll reveal (only when JS is running) */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .js .reveal.visible { opacity: 1; transform: none; }

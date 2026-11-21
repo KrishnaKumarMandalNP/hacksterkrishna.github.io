@@ -9,6 +9,27 @@
 	onScroll();
 	window.addEventListener('scroll', onScroll, { passive: true });
 
+	// First-visit intro: remove it when the wipe ends; a click or key skips it
+	var intro = document.querySelector('.intro-screen');
+	if (intro && document.documentElement.classList.contains('intro')) {
+		var finish = function () {
+			document.documentElement.classList.remove('intro-lock');
+			if (intro.parentNode) intro.parentNode.removeChild(intro);
+			document.removeEventListener('keydown', skip);
+		};
+		// skipping also cancels the timed hero entrance so content shows at once
+		var skip = function () {
+			document.documentElement.classList.remove('intro');
+			finish();
+		};
+		intro.addEventListener('animationend', function (e) { if (e.animationName === 'intro-exit') finish(); });
+		intro.addEventListener('click', skip);
+		document.addEventListener('keydown', skip);
+		setTimeout(finish, 2500);
+	} else if (intro) {
+		intro.parentNode.removeChild(intro);
+	}
+
 	// Light/dark toggle (remembered per visitor)
 	var themeButton = document.querySelector('.theme-toggle');
 	if (themeButton) {
