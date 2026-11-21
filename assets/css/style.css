@@ -469,7 +469,7 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; }
 		#0b1020;
 	animation: intro-exit .55s cubic-bezier(.7, 0, .3, 1) 1.15s forwards;
 }
-.intro-mark { position: relative; width: 120px; height: 120px; display: grid; place-items: center; }
+.intro-mark { position: relative; width: 132px; height: 132px; display: grid; place-items: center; }
 .intro-ring { position: absolute; inset: 0; transform: rotate(-90deg); }
 .intro-ring circle {
 	fill: none; stroke: url(#introGrad); stroke-width: 4; stroke-linecap: round;
@@ -477,9 +477,9 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin: 0; }
 	animation: intro-draw .7s cubic-bezier(.65, 0, .35, 1) forwards;
 	filter: drop-shadow(0 0 8px rgba(56, 189, 248, .55));
 }
-.intro-mono {
-	font: 700 2.1rem/1 var(--font-display); letter-spacing: .02em;
-	background: linear-gradient(135deg, #38bdf8, #a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent;
+.intro-photo {
+	width: 112px; height: 112px; border-radius: 50%; object-fit: cover;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
 	opacity: 0; transform: scale(.6);
 	animation: intro-pop .45s cubic-bezier(.34, 1.56, .64, 1) .25s forwards;
 }
