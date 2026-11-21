@@ -9,6 +9,19 @@
 	onScroll();
 	window.addEventListener('scroll', onScroll, { passive: true });
 
+	// Light/dark toggle (remembered per visitor)
+	var themeButton = document.querySelector('.theme-toggle');
+	if (themeButton) {
+		themeButton.addEventListener('click', function () {
+			var root = document.documentElement;
+			var current = root.dataset.theme ||
+				(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+			var next = current === 'light' ? 'dark' : 'light';
+			root.dataset.theme = next;
+			try { localStorage.setItem('theme', next); } catch (e) {}
+		});
+	}
+
 	// Mobile menu
 	function setMenu(open) {
 		nav.classList.toggle('open', open);

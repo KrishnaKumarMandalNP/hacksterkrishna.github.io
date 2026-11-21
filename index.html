@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Krishna Kumar Mandal — IT Analyst &amp; E-Governance Expert</title>
-	<meta name="description" content="Krishna Kumar Mandal (KrishnaKumarMandalNP) is an IT Analyst and E-Governance Expert from Nepal with experience in software development, databases and digital transformation for government and private sectors.">
+	<meta name="description" content="Krishna Kumar Mandal (कृष्ण कुमार मण्डल) is an IT Analyst and E-Governance Expert with UNDP PLGSP in Janakpurdham, Nepal — building government portals, CMS platforms and digital systems since 2012.">
 	<meta name="author" content="Krishna Kumar Mandal">
-	<meta name="keywords" content="Krishna Kumar Mandal, KrishnaKumarMandalNP, hacksterkrishna, krishna mandal, IT analyst, e-governance, UNDP, PLGSP, Madhesh Province, Koshi Province, Janakpur, web developer, Android custom ROM, XDA">
+	<meta name="keywords" content="Krishna Kumar Mandal, कृष्ण कुमार मण्डल, KrishnaKumarMandalNP, hacksterkrishna, krishna mandal, IT analyst, e-governance expert, UNDP, PLGSP, LGPAS, Madhesh Province, Koshi Province, Janakpurdham, full stack developer, PHP developer, Nepal">
 	<meta name="robots" content="index, follow">
 	<link rel="canonical" href="https://krishnam.com.np/">
 
@@ -18,7 +18,7 @@
 	<!-- Social preview -->
 	<meta property="og:type" content="profile">
 	<meta property="og:title" content="Krishna Kumar Mandal — IT Analyst &amp; E-Governance Expert">
-	<meta property="og:description" content="IT professional and e-governance expert from Nepal. Developer, trainer, open-source contributor.">
+	<meta property="og:description" content="IT Analyst & E-Governance Expert with UNDP PLGSP, Madhesh Province. Full-stack developer and trainer building digital systems for government since 2012.">
 	<meta property="og:url" content="https://krishnam.com.np/">
 	<meta property="og:image" content="https://krishnam.com.np/images/web/og.jpg">
 	<meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,10 @@
 	<link rel="icon" type="image/png" href="images/icon.png">
 	<link rel="apple-touch-icon" href="images/icon.png">
 	<meta name="theme-color" content="#0b1020">
-	<script>document.documentElement.classList.add('js');</script>
+	<script>
+		document.documentElement.classList.add('js');
+		try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+	</script>
 
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,19 +46,23 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="preload" as="image" href="images/web/banner.webp">
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5178276727481958" crossorigin="anonymous"></script>
-
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"name": "Krishna Kumar Mandal",
-		"alternateName": ["KrishnaKumarMandalNP", "hacksterkrishna"],
+		"alternateName": ["कृष्ण कुमार मण्डल", "KrishnaKumarMandalNP", "hacksterkrishna"],
 		"url": "https://krishnam.com.np/",
-		"image": "https://krishnam.com.np/images/icon.png",
+		"image": "https://krishnam.com.np/images/web/krishna.webp",
 		"jobTitle": "Information Technology Analyst & E-Governance Expert",
 		"worksFor": { "@type": "Organization", "name": "United Nations Development Programme (UNDP) – PLGSP" },
 		"address": { "@type": "PostalAddress", "addressLocality": "Janakpurdham", "addressRegion": "Madhesh Province", "addressCountry": "NP" },
+		"alumniOf": [
+			{ "@type": "CollegeOrUniversity", "name": "Sambhram Institute of Technology, Bangalore" },
+			{ "@type": "CollegeOrUniversity", "name": "Ramswaroop Ramsagar Multiple Campus (RRMC), Janakpur" }
+		],
+		"knowsLanguage": ["Nepali", "Maithili", "Hindi", "English"],
+		"knowsAbout": ["E-governance", "Web development", "PHP", "Database management", "Digital transformation", "Cybersecurity", "LGPAS"],
 		"sameAs": [
 			"https://github.com/KrishnaKumarMandalNP",
 			"https://www.linkedin.com/in/hacksterkrishna",
@@ -76,17 +83,20 @@
 	<header class="site-header" id="top">
 		<div class="container nav-bar">
 			<a class="brand" href="#top" aria-label="KrishnaKumarMandalNP — back to top">
-				<img src="images/icon.png" alt="" width="32" height="32">
+				<img src="images/web/krishna-sm.webp" alt="" width="32" height="32">
 				<span>KrishnaKumarMandal<b>NP</b></span>
 			</a>
-			<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-				<i class="fa-solid fa-bars" aria-hidden="true"></i>
-			</button>
+			<div class="nav-tools">
+				<button class="theme-toggle" type="button" aria-label="Switch colour theme"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i></button>
+				<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+					<i class="fa-solid fa-bars" aria-hidden="true"></i>
+				</button>
+			</div>
 			<nav id="site-nav" class="site-nav" aria-label="Main">
 				<a href="#about">About</a>
 				<a href="#experience">Experience</a>
+				<a href="#projects">Projects</a>
 				<a href="#skills">Skills</a>
-				<a href="#education">Education</a>
 				<a href="certificates.html">Certificates</a>
 				<a href="#contact" class="nav-cta">Contact</a>
 			</nav>
@@ -97,23 +107,27 @@
 		<!-- Hero -->
 		<section class="hero">
 			<div class="container hero-inner">
-				<p class="eyebrow">Hi, I'm</p>
-				<h1>Krishna Kumar Mandal</h1>
-				<p class="handle">@KrishnaKumarMandalNP</p>
-				<p class="lead">IT Analyst &amp; E-Governance Expert building digital solutions that help governments serve people better.</p>
-				<ul class="chips" aria-label="Roles">
-					<li>IT Analyst</li>
-					<li>Developer &amp; Designer</li>
-					<li>Trainer</li>
-					<li>Android ROM Developer</li>
-					<li>Certified Ethical Hacker</li>
-					<li>Taekwondo Black Belt</li>
-					<li>Illusionist</li>
-				</ul>
-				<div class="hero-actions">
-					<a class="btn btn-primary" href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Get in touch</a>
-					<a class="btn btn-ghost" href="https://www.linkedin.com/in/hacksterkrishna" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
-					<a class="btn btn-ghost" href="https://github.com/KrishnaKumarMandalNP" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+				<div class="hero-text">
+					<p class="eyebrow">Hi, I'm</p>
+					<h1>Krishna Kumar Mandal</h1>
+					<p class="handle"><span lang="ne">कृष्ण कुमार मण्डल</span> · @KrishnaKumarMandalNP</p>
+					<p class="lead">IT Analyst &amp; E-Governance Expert with UNDP PLGSP, building digital systems that help governments serve people better.</p>
+					<ul class="chips" aria-label="Roles">
+						<li>IT Analyst &amp; E-Governance Expert</li>
+						<li>Full-Stack Developer</li>
+						<li>Trainer</li>
+						<li>Certified Ethical Hacker</li>
+					</ul>
+					<div class="hero-actions">
+						<a class="btn btn-primary" href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Get in touch</a>
+						<a class="btn btn-ghost" href="cv/Krishna-Kumar-Mandal-CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV</a>
+						<a class="btn btn-ghost btn-icon" href="https://www.linkedin.com/in/hacksterkrishna" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+						<a class="btn btn-ghost btn-icon" href="https://github.com/KrishnaKumarMandalNP" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="hero-photo">
+					<img src="images/web/krishna.webp" alt="Portrait of Krishna Kumar Mandal" width="365" height="365">
+					<p class="hero-badge"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Janakpurdham, Nepal</p>
 				</div>
 			</div>
 			<a class="scroll-hint" href="#about" aria-label="Scroll to About"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
@@ -124,12 +138,12 @@
 			<div class="container about-grid">
 				<div class="reveal">
 					<h2 class="section-title"><span>01</span> About me</h2>
-					<p>I am an IT professional and e-governance expert who has been building software since 2012. My work spans software development, database management and digital transformation, and I focus on creating digital solutions that make government and private-sector services more efficient.</p>
-					<p>At heart I'm a tech enthusiast who loves learning new skills and technologies. I contribute to the tech community through training, open-source collaboration on GitHub and knowledge sharing. I used to build Android custom ROMs, I enjoy exploring operating systems (especially Arch Linux), and I keep up with web development, cybersecurity and governance systems.</p>
+					<p>I am an IT professional and e-governance expert who has been building software since 2012. Today I work as Information Technology Analyst &amp; E-Governance Expert with UNDP's Provincial and Local Governance Strengthening Programme (PLGSP) in Madhesh Province, helping provincial and local governments adopt digital systems that make public services faster and more transparent.</p>
+					<p>Before UNDP I ran IT for a provincial ministry, led full-stack teams at software companies, and built government portals, CMS platforms and e-learning systems. I also train others — as an LGPAS trainer for local governance and as a Taekwondo instructor — and I keep learning, from cybersecurity to AI.</p>
 				</div>
 				<ul class="stats reveal" aria-label="Highlights">
 					<li><strong data-since="2012">10+</strong><span>years in tech</span></li>
-					<li><strong>7</strong><span>organisations</span></li>
+					<li><strong>35</strong><span>certificates &amp; letters</span></li>
 					<li><strong>2</strong><span>provinces served</span></li>
 				</ul>
 			</div>
@@ -159,8 +173,8 @@
 					<li class="job reveal">
 						<img src="images/web/mowsed.webp" alt="Ministry of Energy, Irrigation and Water Supply, Madhesh Province" width="681" height="435" loading="lazy">
 						<div class="job-body">
-							<p class="job-date">15 Jun 2021 – 25 Feb 2025</p>
-							<h3>Computer Operator</h3>
+							<p class="job-date">17 Sep 2021 – 25 Feb 2025</p>
+							<h3>Computer Operator (Assistant 5th level)</h3>
 							<p class="job-org">Ministry of Energy, Irrigation and Water Supply, Madhesh Province, Janakpurdham</p>
 							<a class="job-doc" href="certificate/experience-mowsed-madhesh-2025.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Experience letter</a>
 						</div>
@@ -168,18 +182,18 @@
 					<li class="job reveal">
 						<img src="images/web/orangic.webp" alt="Orangic Smart Technology" width="900" height="447" loading="lazy">
 						<div class="job-body">
-							<p class="job-date">17 Jun 2019 – 8 Jun 2021</p>
+							<p class="job-date">17 Jul 2019 – 13 Jun 2021</p>
 							<h3>Senior Full Stack Developer &amp; Project Manager</h3>
-							<p class="job-org"><a href="https://orangicsmarttechnology.com.np" target="_blank" rel="noopener">Orangic Smart Technology</a></p>
+							<p class="job-org"><a href="https://orangicsmarttechnology.com.np" target="_blank" rel="noopener">Orangic Smart Technology</a>, Janakpurdham</p>
 							<a class="job-doc" href="certificate/experience-orangic-2021.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Experience letter</a>
 						</div>
 					</li>
 					<li class="job reveal">
 						<img src="images/web/pic06.webp" alt="Grab Infotech" width="683" height="416" loading="lazy">
 						<div class="job-body">
-							<p class="job-date">Nov 2017 – Jun 2019</p>
-							<h3>Senior Developer &amp; Project Manager</h3>
-							<p class="job-org"><a href="http://grabinfotech.com/" target="_blank" rel="noopener">Grab Infotech</a> — project manager of <a href="https://a1pathshala.com/" target="_blank" rel="noopener">A1pathshala</a></p>
+							<p class="job-date">Nov 2017 – Jul 2019</p>
+							<h3>PHP Developer &amp; Project Manager</h3>
+							<p class="job-org"><a href="http://grabinfotech.com/" target="_blank" rel="noopener">Grab Infotech</a>, Kathmandu — project manager of <a href="https://a1pathshala.com/" target="_blank" rel="noopener">A1pathshala</a></p>
 							<a class="job-doc" href="certificate/experience-grab-infotech-2019.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Experience letter</a>
 						</div>
 					</li>
@@ -208,44 +222,129 @@
 						</div>
 					</li>
 				</ol>
-				<p class="also reveal"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> Also: Taekwondo trainer (2017 – present) · Electrician (2008 – 2010)</p>
+				<p class="also reveal"><i class="fa-solid fa-hand-fist" aria-hidden="true"></i> <span>Also: Taekwondo instructor, Mamata Taekwondo Dojang (<a href="certificate/taekwondo-instructor-mamata-dojang-2081.pdf" target="_blank" rel="noopener">letter</a>) · Electrician (2008 – 2010)</span></p>
+			</div>
+		</section>
+
+		<!-- Projects -->
+		<section id="projects" class="section">
+			<div class="container">
+				<h2 class="section-title reveal"><span>03</span> Selected projects</h2>
+				<p class="section-lead reveal">Systems I have designed and built for government offices, organisations and businesses.</p>
+				<div class="cards projects">
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-landmark card-icon" aria-hidden="true"></i><span class="badge">Government</span></div>
+						<h3>Madhesh Province Portal</h3>
+						<p>Bilingual (Nepali/English) provincial government portal with its own CMS: office directory with live search, "nearest office" map, infographics, notices and a public grievance form with ticket tracking. Hardened with strict CSP, 2FA and upload sanitising.</p>
+						<ul class="tags"><li>PHP 8</li><li>MySQL</li><li>Bootstrap 5</li><li>Leaflet</li><li>Chart.js</li></ul>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-layer-group card-icon" aria-hidden="true"></i><span class="badge">Platform</span></div>
+						<h3>Morfexa CMS</h3>
+						<p>Multi-site CMS that powers many live business websites from one codebase, with switchable templates, blog, appointment booking, bulk SMS and an admin studio for each site.</p>
+						<ul class="tags"><li>PHP</li><li>MySQL</li><li>Multi-tenant</li><li>VPS</li></ul>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-calendar-check card-icon" aria-hidden="true"></i><span class="badge">Government</span></div>
+						<h3>EIMS — Event Management System</h3>
+						<p>Event and training management system for governance programmes: participant registration and login, event administration, attendance and records, with migrations and backups built in.</p>
+						<ul class="tags"><li>PHP</li><li>MySQL</li><li>Role-based access</li></ul>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-briefcase card-icon" aria-hidden="true"></i><span class="badge">Local government</span></div>
+						<h3>Rojgari App — Janakpurdham</h3>
+						<p>Employment portal for Janakpurdham Sub-Metropolitan City connecting citizens with job providers, with separate citizen, provider and admin panels and NID, phone and email verification.</p>
+						<ul class="tags"><li>PHP</li><li>MySQL</li><li>Multi-role</li></ul>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-building-columns card-icon" aria-hidden="true"></i><span class="badge">Government</span></div>
+						<h3>Ministry Website &amp; CMS</h3>
+						<p>Website and content management for a provincial ministry: divisions, notices, downloads, FAQs and contact — updated in-house by ministry staff.</p>
+						<ul class="tags"><li>PHP</li><li>MySQL</li><li>CMS</li></ul>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-graduation-cap card-icon" aria-hidden="true"></i><span class="badge">E-learning</span></div>
+						<h3>A1pathshala &amp; eStudy</h3>
+						<p>Managed the A1pathshala e-learning platform at Grab Infotech, and built eStudy, an online referral-based study system.</p>
+						<ul class="tags"><li>PHP</li><li>JavaScript</li><li>MySQL</li></ul>
+						<a class="card-link" href="https://github.com/KrishnaKumarMandalNP/estudy" target="_blank" rel="noopener">eStudy on GitHub <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-magnifying-glass-chart card-icon" aria-hidden="true"></i><span class="badge">Tool</span></div>
+						<h3>Domain Inspector</h3>
+						<p>Website health checker that audits a domain's SEO basics — titles, meta tags and related checks — and reports what to fix.</p>
+						<ul class="tags"><li>PHP</li><li>SEO</li></ul>
+					</article>
+					<article class="card project reveal">
+						<div class="project-head"><i class="fa-solid fa-globe card-icon" aria-hidden="true"></i><span class="badge">Client work</span></div>
+						<h3>Websites for professionals</h3>
+						<p>Personal and business websites for clients, including sites for Rakesh Kumar Sah, Ansil Shah, Nirajan Subedi and Basanta Raj Acharya.</p>
+						<ul class="tags"><li>HTML</li><li>CSS</li><li>SCSS</li></ul>
+						<a class="card-link" href="https://github.com/KrishnaKumarMandalNP?tab=repositories" target="_blank" rel="noopener">See repositories <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials -->
+		<section id="testimonials" class="section section-alt">
+			<div class="container">
+				<h2 class="section-title reveal"><span>04</span> What employers say</h2>
+				<div class="cards quotes">
+					<figure class="card quote reveal">
+						<blockquote>“Mr. Mandal has exhibited outstanding technical expertise at the work, and dedication as well as professionalism in his role. His contributions has significantly enhanced the efficiency of our IT operations.”</blockquote>
+						<figcaption><strong>Er. Suman Kumar Jha</strong><span>Senior Divisional Engineer, Ministry of Energy, Irrigation and Water Supply, Madhesh Province</span><a href="certificate/experience-mowsed-madhesh-2025.pdf" target="_blank" rel="noopener">Read letter</a></figcaption>
+					</figure>
+					<figure class="card quote reveal">
+						<blockquote>“As a Senior Full Stack Developer, Mr. Krishna Kumar Mandal has shown great leadership skills, guiding and mentoring junior developers, and fostering a collaborative and productive work environment.”</blockquote>
+						<figcaption><strong>Shanti Devi Mandal</strong><span>CEO, Orangic Smart Technology</span><a href="certificate/experience-orangic-2021.pdf" target="_blank" rel="noopener">Read letter</a></figcaption>
+					</figure>
+					<figure class="card quote reveal">
+						<blockquote>“With his enthusiasm to work, learn and progress, I am certain that he would make a great employee to any enterprise.”</blockquote>
+						<figcaption><strong>Gita Paudel</strong><span>HR Manager, Grab Infotech</span><a href="certificate/experience-grab-infotech-2019.pdf" target="_blank" rel="noopener">Read letter</a></figcaption>
+					</figure>
+					<figure class="card quote reveal">
+						<blockquote>“Throughout his tenure, Mr. Mandal has demonstrated exceptional dedication and sincerity in his role, earning the admiration of both students and staff.”</blockquote>
+						<figcaption><strong>Umesh Sah</strong><span>Chief Coach, Mamata Taekwondo Dojang</span><a href="certificate/taekwondo-instructor-mamata-dojang-2081.pdf" target="_blank" rel="noopener">Read letter</a></figcaption>
+					</figure>
+				</div>
 			</div>
 		</section>
 
 		<!-- Skills -->
 		<section id="skills" class="section">
 			<div class="container">
-				<h2 class="section-title reveal"><span>03</span> Skills</h2>
+				<h2 class="section-title reveal"><span>05</span> Skills</h2>
 				<div class="cards">
-					<article class="card reveal">
-						<i class="fa-solid fa-code card-icon" aria-hidden="true"></i>
-						<h3>Programming &amp; Development</h3>
-						<ul class="tags"><li>PHP</li><li>Python</li><li>Java</li><li>Kotlin</li><li>C/C++</li><li>React</li><li>Node.js</li><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>Materialize</li><li>AJAX</li><li>API Integration</li></ul>
-					</article>
 					<article class="card reveal">
 						<i class="fa-solid fa-landmark card-icon" aria-hidden="true"></i>
 						<h3>E-Governance &amp; Data</h3>
-						<ul class="tags"><li>Digital Transformation</li><li>Database Management</li><li>Government Systems</li><li>Training &amp; Capacity Building</li></ul>
+						<ul class="tags"><li>Digital Transformation</li><li>LGPAS</li><li>Government Portals</li><li>Database Management</li><li>Training &amp; Capacity Building</li><li>Statistical Literacy</li></ul>
 					</article>
 					<article class="card reveal">
-						<i class="fa-brands fa-android card-icon" aria-hidden="true"></i>
-						<h3>Mobile Development</h3>
-						<ul class="tags"><li>Android Apps</li><li>Custom ROMs</li></ul>
+						<i class="fa-solid fa-code card-icon" aria-hidden="true"></i>
+						<h3>Programming &amp; Development</h3>
+						<ul class="tags"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>Python</li><li>Java</li><li>Kotlin</li><li>C/C++</li><li>React</li><li>Node.js</li><li>HTML5</li><li>CSS3</li><li>Bootstrap</li><li>AJAX</li><li>REST APIs</li></ul>
 					</article>
 					<article class="card reveal">
 						<i class="fa-solid fa-shield-halved card-icon" aria-hidden="true"></i>
-						<h3>Testing &amp; Security</h3>
-						<ul class="tags"><li>Software Testing</li><li>Ethical Hacking</li><li>BackTrack</li><li>Cybersecurity Tools</li></ul>
+						<h3>Security</h3>
+						<ul class="tags"><li>Ethical Hacking</li><li>Web App Hardening</li><li>Software Testing</li><li>Cybersecurity Tools</li></ul>
+					</article>
+					<article class="card reveal">
+						<i class="fa-solid fa-robot card-icon" aria-hidden="true"></i>
+						<h3>AI &amp; Productivity</h3>
+						<ul class="tags"><li>AI for Business</li><li>Prompt Engineering</li><li>Digital Marketing</li></ul>
+					</article>
+					<article class="card reveal">
+						<i class="fa-brands fa-android card-icon" aria-hidden="true"></i>
+						<h3>Mobile &amp; Systems</h3>
+						<ul class="tags"><li>Android Apps</li><li>Custom ROMs</li><li>Linux (Arch)</li><li>Networking</li><li>Hardware Support</li></ul>
 					</article>
 					<article class="card reveal">
 						<i class="fa-solid fa-screwdriver-wrench card-icon" aria-hidden="true"></i>
-						<h3>Tools &amp; Platforms</h3>
-						<ul class="tags"><li>Git</li><li>GitHub</li><li>Bitbucket</li><li>Arch Linux</li></ul>
-					</article>
-					<article class="card reveal">
-						<i class="fa-solid fa-film card-icon" aria-hidden="true"></i>
-						<h3>Design &amp; Multimedia</h3>
-						<ul class="tags"><li>Photo Manipulation</li><li>Audio Editing</li><li>Video Editing</li><li>VFX</li></ul>
+						<h3>Tools &amp; Design</h3>
+						<ul class="tags"><li>Git</li><li>GitHub</li><li>Bitbucket</li><li>VPS / Apache</li><li>Photo &amp; Video Editing</li><li>VFX</li></ul>
 					</article>
 				</div>
 			</div>
@@ -254,7 +353,7 @@
 		<!-- Education & more -->
 		<section id="education" class="section section-alt">
 			<div class="container">
-				<h2 class="section-title reveal"><span>04</span> Education &amp; more</h2>
+				<h2 class="section-title reveal"><span>06</span> Education &amp; more</h2>
 				<div class="cards cards-3">
 					<article class="card reveal">
 						<i class="fa-solid fa-graduation-cap card-icon" aria-hidden="true"></i>
@@ -279,11 +378,22 @@
 						<a class="card-link" href="certificates.html">View all certificates <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 					</article>
 					<article class="card reveal">
+						<i class="fa-solid fa-language card-icon" aria-hidden="true"></i>
+						<h3>Languages</h3>
+						<ul class="list">
+							<li><strong>Maithili</strong><span>Native</span></li>
+							<li><strong>Nepali</strong><span>Fluent</span></li>
+							<li><strong>Hindi</strong><span>Fluent</span></li>
+							<li><strong>English</strong><span>Professional</span></li>
+						</ul>
+					</article>
+					<article class="card reveal">
 						<i class="fa-solid fa-heart card-icon" aria-hidden="true"></i>
 						<h3>Beyond work</h3>
 						<ul class="list">
-							<li><strong>Martial artist</strong><span>Taekwondo black belt &amp; trainer</span></li>
-							<li><strong>Illusionist</strong></li>
+							<li><strong>Taekwondo black belt</strong><span>Instructor at Mamata Taekwondo Dojang</span></li>
+							<li><strong>Illusionist</strong><span>Stage magic</span></li>
+							<li><strong>Community</strong><span>Honoured by Ekrahi Samaj Sewa Yuva Club</span></li>
 							<li><strong>Music, swimming &amp; travelling</strong></li>
 						</ul>
 					</article>
@@ -294,14 +404,16 @@
 		<!-- Contact -->
 		<section id="contact" class="section contact">
 			<div class="container contact-inner reveal">
-				<h2 class="section-title"><span>05</span> Contact</h2>
-				<p class="contact-lead"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Currently based in Janakpurdham, Madhesh Province, Nepal. Drop me an email or connect on social media.</p>
+				<h2 class="section-title"><span>07</span> Contact</h2>
+				<p class="contact-lead"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Based in Janakpurdham, Madhesh Province, Nepal. Open to collaboration on e-governance, digital public services and training.</p>
 				<ul class="emails">
 					<li><a href="mailto:krishnagek@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> krishnagek@gmail.com</a><span>Personal</span></li>
 					<li><a href="mailto:krishna.kumar.mandal@undp.org"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> krishna.kumar.mandal@undp.org</a><span>UNDP</span></li>
-					<li><a href="mailto:krishna.mowsed@madhesh.gov.np"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> krishna.mowsed@madhesh.gov.np</a><span>Madhesh Province</span></li>
 				</ul>
-				<a class="btn btn-ghost" href="https://krishnamandal.com.np" target="_blank" rel="noopener">Visit my other site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+				<div class="contact-actions">
+					<a class="btn btn-primary" href="cv/Krishna-Kumar-Mandal-CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV</a>
+					<a class="btn btn-ghost" href="https://www.linkedin.com/in/hacksterkrishna" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> Connect on LinkedIn</a>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -318,7 +430,7 @@
 				<li><a href="https://open.spotify.com/user/hacksterkrishna" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify" aria-hidden="true"></i></a></li>
 				<li><a href="https://www.pinterest.com/hacksterkrishna" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
 			</ul>
-			<p class="copyright">&copy; 2016–<span id="year">2026</span> <a href="https://krishnam.com.np/">KrishnaKumarMandalNP</a> · Design by <a href="https://orangicsmarttechnology.com.np" target="_blank" rel="noopener">Orangic Smart Technology</a></p>
+			<p class="copyright">&copy; 2016–<span id="year">2026</span> Krishna Kumar Mandal · <a href="https://krishnam.com.np/">krishnam.com.np</a></p>
 		</div>
 	</footer>
 

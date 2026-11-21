@@ -19,7 +19,10 @@
 	<link rel="icon" type="image/png" href="images/icon.png">
 	<link rel="apple-touch-icon" href="images/icon.png">
 	<meta name="theme-color" content="#0b1020">
-	<script>document.documentElement.classList.add('js');</script>
+	<script>
+		document.documentElement.classList.add('js');
+		try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+	</script>
 
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -34,8 +37,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/style.css">
-
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5178276727481958" crossorigin="anonymous"></script>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -46,17 +47,20 @@
 	<header class="site-header solid" id="top">
 		<div class="container nav-bar">
 			<a class="brand" href="index.html" aria-label="KrishnaKumarMandalNP — home">
-				<img src="images/icon.png" alt="" width="32" height="32">
+				<img src="images/web/krishna-sm.webp" alt="" width="32" height="32">
 				<span>KrishnaKumarMandal<b>NP</b></span>
 			</a>
-			<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-				<i class="fa-solid fa-bars" aria-hidden="true"></i>
-			</button>
+			<div class="nav-tools">
+				<button class="theme-toggle" type="button" aria-label="Switch colour theme"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i></button>
+				<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+					<i class="fa-solid fa-bars" aria-hidden="true"></i>
+				</button>
+			</div>
 			<nav id="site-nav" class="site-nav" aria-label="Main">
 				<a href="index.html#about">About</a>
 				<a href="index.html#experience">Experience</a>
+				<a href="index.html#projects">Projects</a>
 				<a href="index.html#skills">Skills</a>
-				<a href="index.html#education">Education</a>
 				<a href="certificates.html" class="active" aria-current="page">Certificates</a>
 				<a href="index.html#contact" class="nav-cta">Contact</a>
 			</nav>
@@ -97,7 +101,7 @@
 				<li><a href="https://open.spotify.com/user/hacksterkrishna" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify" aria-hidden="true"></i></a></li>
 				<li><a href="https://www.pinterest.com/hacksterkrishna" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
 			</ul>
-			<p class="copyright">&copy; 2016–<span id="year">2026</span> <a href="https://krishnam.com.np/">KrishnaKumarMandalNP</a> · Design by <a href="https://orangicsmarttechnology.com.np" target="_blank" rel="noopener">Orangic Smart Technology</a></p>
+			<p class="copyright">&copy; 2016–<span id="year">2026</span> Krishna Kumar Mandal · <a href="https://krishnam.com.np/">krishnam.com.np</a></p>
 		</div>
 	</footer>
 
