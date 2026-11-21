@@ -1,4 +1,10 @@
 # krishnam.com.np
-My Website hosted on github.
 
-Visit Here:-[krishnam.com.np](http://krishnam.com.np)
+Personal portfolio of Krishna Kumar Mandal (KrishnaKumarMandalNP), hosted on GitHub Pages.
+
+Visit: [krishnam.com.np](https://krishnam.com.np)
+
+- `index.html` — main page
+- `certificates.html` — certificates & achievements; to add one, put the PDF in `certificate/` and add an entry to `certificate/certificates.js`
+- `assets/css/style.css`, `assets/js/site.js` — styles and behaviour (no build step, no jQuery)
+- `images/web/` — optimized WebP images used by the page; originals are in `images/`
